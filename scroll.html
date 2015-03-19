@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        body{
+            height: 2000px;
+        }
+
+        .bottom{
+            position: fixed;
+            bottom:10px;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+<input type="button" value="goToBottom" id="btn1" >
+<input type="button" value="goToTop" id="btn2" class="bottom">
+<script src="js/animate.js" type="application/javascript"></script>
+<script>
+    var oBtn1=document.getElementById('btn1');
+    var oBtn2=document.getElementById('btn2');
+    oBtn1.onclick=function(){
+        myAnimate.run(document.body,{'scrollTop':2000},500);
+    }
+    oBtn2.onclick=function(){
+        myAnimate.run(document.body,{'scrollTop':0},500);
+    }
+</script>
+</body>
+</html>

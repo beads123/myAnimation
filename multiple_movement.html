@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .div1{
+            width: 100px;
+            height: 100px;
+            background: red;
+            position: absolute;
+
+
+        }
+        .div2{
+            width: 100px;
+            height: 100px;
+            background: green;
+            position: absolute;
+            top:100px;
+        }
+        .input1{
+            position: absolute;
+            top:250px;
+            z-index:999;
+        }
+        .input2{
+            position: absolute;
+            top:250px;
+            left:300px;
+            z-index:999;
+        }
+        .input3{
+            position: absolute;
+            top:250px;
+            left:500px;
+            z-index:999;
+        }
+    </style>
+</head>
+<body>
+<div class="div1">
+    div1
+</div>
+<div class="div2">
+    div2
+</div>
+<input type="button" value="move simultaneously" id="btn1" class="input1"/>
+<input type="button" value="move back simultaneously" id="btn2" class="input2"/>
+<script src="js/animate.js" type="application/javascript"></script>
+<script>
+    var oDiv1=document.querySelector('.div1');
+    var oDiv2=document.querySelector('.div2');
+    var oBtn1=document.getElementById('btn1');
+    var oBtn2=document.getElementById('btn2');
+    //获取浏览器可见高度和宽度
+    var disX=document.documentElement.clientWidth-100;
+    var disY=document.documentElement.clientHeight;
+    oBtn1.onclick=function(){
+        myAnimate.run(oDiv1,{'left':disX},500);
+        myAnimate.run(oDiv1,{'top':disY-200},500);
+        myAnimate.run(oDiv2,{'left':disX},500);
+        myAnimate.run(oDiv2,{'top':disY-100},500);
+    }
+
+    oBtn2.onclick=function(){
+        myAnimate.run(oDiv1,{'left':0},500);
+        myAnimate.run(oDiv1,{'top':0},500);
+        myAnimate.run(oDiv2,{'left':0},500);
+        myAnimate.run(oDiv2,{'top':100},500);
+    }
+
+</script>
+</body>
+</html>

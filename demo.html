@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+<meta charset="UTF-8">
+<title></title>
+<style>
+* {
+    margin: 0;
+    padding: 0;
+}
+
+h4 {
+    height: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#demo1 {
+    height: 300px;
+    border: 1px solid #ccc;
+    position: relative;
+}
+
+#demo1 .div1 {
+    height: 100px;
+    width: 100px;
+    background: green;
+    position: absolute;
+    top: 20px;
+    left: 0;
+}
+
+#demo1 #btn1 {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}
+
+#demo1 #btn2 {
+    position: absolute;
+    bottom: 10px;
+    left: 80px;
+}
+
+#demo1 #btn3 {
+    position: absolute;
+    bottom: 10px;
+    left: 150px;
+}
+
+#demo1 #btn4 {
+    position: absolute;
+    bottom: 10px;
+    left: 230px;
+}
+
+#demo1 #btn5 {
+    position: absolute;
+    bottom: 10px;
+    left: 310px;
+}
+
+#demo2 {
+    height: 300px;
+    border: 1px solid #ccc;
+    position: relative;
+    border-top: none;
+}
+
+#demo2 .div2 {
+    height: 100px;
+    width: 100px;
+    background: green;
+    position: absolute;
+    top: 20px;
+    left: 0;
+}
+
+#demo2 #btn6 {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+
+}
+
+#demo2 #btn7 {
+    position: absolute;
+    bottom: 10px;
+    left: 80px;
+}
+
+#demo3 {
+    height: 300px;
+    border: 1px solid #ccc;
+    position: relative;
+    border-top: none;
+}
+
+#demo3 .div3 {
+    height: 100px;
+    width: 100px;
+    background: green;
+    position: absolute;
+    top: 20px;
+    left: 0;
+}
+
+#demo3 #btn8 {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}
+
+#demo3 #btn9 {
+    position: absolute;
+    bottom: 10px;
+    left: 80px;
+}
+
+#demo4 {
+    position: relative;
+    height: 300px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+
+#demo4 .div4 {
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    top: 20px;
+    left: 0;
+    background: green;
+}
+
+#demo4 .div4 {
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    top: 20px;
+    left: 0;
+    background: green;
+}
+
+#demo4 .div5 {
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    top: 120px;
+    left: 0;
+    background: red;
+}
+
+#demo4 #btn10 {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}
+
+#demo4 #btn11 {
+    position: absolute;
+    bottom: 10px;
+    left: 80px;
+}
+
+#bottom {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 999;
+    width: 100px;
+    height: 30px;
+    background: cornflowerblue;
+    color: #fff;
+}
+
+#top {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 999;
+    width: 100px;
+    height: 30px;
+    background: cornflowerblue;
+    color: #fff;
+}
+
+#demo5 {
+    height: 500px;
+    border: 1px solid #ccc;
+    border-top: none;
+    position: relative;
+}
+
+#demo5 .div6 {
+    height: 100px;
+    width: 100px;
+    background: green;
+}
+
+#demo5 .div7 {
+    height: 100px;
+    width: 100px;
+    background: red;
+}
+
+#demo5 h4 {
+    height: 20px;
+    position: static;
+}
+
+#demo5 #btn12 {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}
+
+#demo5 #btn13 {
+    position: absolute;
+    bottom: 10px;
+    left: 80px;
+}
+
+#demo6 {
+    height: 500px;
+    border: 1px solid #ccc;
+    border-top: none;
+    position: relative;
+}
+
+#demo6 .div8 {
+    height: 100px;
+    width: 100px;
+    background: green;
+}
+
+#demo6 .div9 {
+    height: 100px;
+    width: 100px;
+    background: red;
+}
+
+#demo6 h4 {
+    height: 20px;
+    position: static;
+}
+
+#demo6 #btn14 {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}
+
+#demo6 #btn15 {
+    position: absolute;
+    bottom: 10px;
+    left: 80px;
+}
+
+#demo7 {
+    position: relative;
+    height: 300px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+
+#demo7 .div10 {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    background: green;
+}
+
+#demo7 .wrap {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    height: 30px;
+}
+
+#demo7 #btn16 {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}
+
+#demo7 #btn17 {
+    position: absolute;
+    bottom: 10px;
+    left: 80px;
+}
+
+</style>
+</head>
+<body>
+<input type="button" value="goToBot" id="bottom"/>
+<input type="button" value="goToTop" id="top"/>
+
+<h3>animation demo</h3>
+
+<div id="demo1">
+    <h4>单物体单属性运动</h4>
+
+    <div class="div1" id="div1"></div>
+    <input type="button" value="setWidth" id="btn1"/>
+    <input type="button" value="setHeight" id="btn2"/>
+    <input type="button" value="setOpacity" id="btn3"/>
+    <input type="button" value="moveRight" id="btn4"/>
+    <input type="button" value="moveBack" id="btn5"/>
+</div>
+<div id="demo2">
+    <h4>单物体多属性同时运动</h4>
+
+    <div class="div2" id="div2"></div>
+    <input type="button" value="move" id="btn6"/>
+    <input type="button" value="reset" id="btn7"/>
+</div>
+<div id="demo3">
+    <h4>单物体多属性顺序运动</h4>
+
+    <div class="div3" id="div3"></div>
+    <input type="button" value="move" id="btn8"/>
+    <input type="button" value="reset" id="btn9"/>
+</div>
+<div id="demo4">
+    <h4>多物体单属性同时运动</h4>
+
+    <div class="div4" id="div4"></div>
+    <div class="div5" id="div5"></div>
+    <input type="button" value="move" id="btn10"/>
+    <input type="button" value="reset" id="btn11"/>
+</div>
+<div id="demo5">
+    <h4>多物体多属性同时运动</h4>
+
+    <div class="div6" id="div6"></div>
+    <div class="div7" id="div7"></div>
+    <input type="button" value="move" id="btn12"/>
+    <input type="button" value="reset" id="btn13"/>
+</div>
+<div id="demo6">
+    <h4>多物体多属性顺序运动</h4>
+
+    <div class="div8" id="div8"></div>
+    <div class="div9" id="div9"></div>
+    <input type="button" value="move" id="btn14"/>
+    <input type="button" value="reset" id="btn15"/>
+</div>
+<div id="demo7">
+    <h4>选择运动类型</h4>
+
+    <div class="div10" id="div10"></div>
+    <div class="wrap">
+        myAnimate.Tween.
+        <select>
+            <option>Linear</option>
+            <option>Quad.easeIn</option>
+            <option>Quad.easeOut</option>
+            <option>Quad.easeInOut</option>
+            <option>Cubic.easeIn</option>
+            <option>Cubic.easeOut</option>
+            <option>Cubic.easeInOut</option>
+            <option>Quart.easeIn</option>
+            <option>Quart.easeOut</option>
+            <option>Quart.easeInOut</option>
+            <option>Quint.easeIn</option>
+            <option>Quint.easeOut</option>
+            <option>Quint.easeInOut</option>
+            <option>Sine.easeIn</option>
+            <option>Sine.easeOut</option>
+            <option>Sine.easeInOut</option>
+            <option>Expo.easeIn</option>
+            <option>Expo.easeOut</option>
+            <option>Expo.easeInOut</option>
+            <option>Circ.easeIn</option>
+            <option>Circ.easeOut</option>
+            <option>Circ.easeInOut</option>
+            <option>Elastic.easeIn</option>
+            <option>Elastic.easeOut</option>
+            <option>Elastic.easeInOut</option>
+            <option>Back.easeIn</option>
+            <option>Back.easeOut</option>
+            <option>Back.easeInOut</option>
+            <option>Bounce.easeIn</option>
+            <option>Bounce.easeOut</option>
+            <option>Bounce.easeInOut</option>
+        </select>
+    </div>
+    <input type="button" value="move" id="btn16"/>
+</div>
+<script src="js/animate.min.js"></script>
+<script>
+    var oDiv1 = document.getElementById('div1');
+    var oDiv2 = document.getElementById('div2');
+    var oDiv3 = document.getElementById('div3');
+    var oDiv4 = document.getElementById('div4');
+    var oDiv5 = document.getElementById('div5');
+    var oDiv6 = document.getElementById('div6');
+    var oDiv7 = document.getElementById('div7');
+    var oDiv8 = document.getElementById('div8');
+    var oDiv9 = document.getElementById('div9');
+    var oDiv10 = document.getElementById('div10');
+
+    var oBtn1 = document.getElementById('btn1');
+    var oBtn2 = document.getElementById('btn2');
+    var oBtn3 = document.getElementById('btn3');
+    var oBtn4 = document.getElementById('btn4');
+    var oBtn5 = document.getElementById('btn5');
+    var oBtn6 = document.getElementById('btn6');
+    var oBtn7 = document.getElementById('btn7');
+    var oBtn8 = document.getElementById('btn8');
+    var oBtn9 = document.getElementById('btn9');
+    var oBtn10 = document.getElementById('btn10');
+    var oBtn11 = document.getElementById('btn11');
+    var oBtn12 = document.getElementById('btn12');
+    var oBtn13 = document.getElementById('btn13');
+    var oBtn14 = document.getElementById('btn14');
+    var oBtn15 = document.getElementById('btn15');
+    var oBtn16 = document.getElementById('btn16');
+    var oBtnBottom = document.getElementById('bottom');
+    var oBtnTop = document.getElementById('top');
+
+    var oDemo1 = document.getElementById('demo1');
+    var oDemo4 = document.getElementById('demo4');
+    var oDemo7 = document.getElementById('demo7');
+
+
+    oBtn1.onclick = function () {
+        myAnimate.run(oDiv1, {'width': 200}, 500);
+    };
+    oBtn2.onclick = function () {
+        myAnimate.run(oDiv1, {'height': 200}, 500);
+    };
+    oBtn3.onclick = function () {
+        myAnimate.run(oDiv1, {'opacity': 30}, 500);
+    };
+    oBtn4.onclick = function () {
+        myAnimate.run(oDiv1, {'left': oDemo1.clientWidth - oDiv1.offsetWidth}, 500);
+    };
+    oBtn5.onclick = function () {
+        myAnimate.run(oDiv1, {'left': 0}, 500);
+    };
+    oBtn6.onclick = function () {
+        myAnimate.run(oDiv2, {'width': 200, 'height': 200, 'opacity': 30}, 500);
+    };
+    oBtn7.onclick = function () {
+        myAnimate.run(oDiv2, {'width': 100, 'height': 100, 'opacity': 100}, 500);
+    };
+    oBtn8.onclick = function () {
+        myAnimate.run(oDiv3, {'width': 200}, 500);
+        myAnimate.run(oDiv3, {'height': 200}, 500);
+        myAnimate.run(oDiv3, {'opacity': 30}, 500);
+    };
+    oBtn9.onclick = function () {
+        myAnimate.run(oDiv3, {'width': 100}, 500);
+        myAnimate.run(oDiv3, {'height': 100}, 500);
+        myAnimate.run(oDiv3, {'opacity': 100}, 500);
+    };
+    oBtn10.onclick = function () {
+        myAnimate.run(oDiv4, {'left': oDemo4.clientWidth - oDiv4.offsetWidth}, 500);
+        myAnimate.run(oDiv5, {'left': oDemo4.clientWidth - oDiv5.offsetWidth}, 500);
+    };
+    oBtn11.onclick = function () {
+        myAnimate.run(oDiv4, {'left': 0}, 500);
+        myAnimate.run(oDiv5, {'left': 0}, 500);
+    };
+    oBtn12.onclick = function () {
+        myAnimate.run(oDiv6, {'width': 200, 'height': 200, 'opacity': 30}, 500);
+        myAnimate.run(oDiv7, {'width': 200, 'height': 200, 'opacity': 30}, 500);
+    };
+    oBtn13.onclick = function () {
+        myAnimate.run(oDiv6, {'width': 100, 'height': 100, 'opacity': 100}, 500);
+        myAnimate.run(oDiv7, {'width': 100, 'height': 100, 'opacity': 100}, 500);
+    };
+    oBtn14.onclick = function () {
+        myAnimate.run(oDiv8, {'width': 200}, 500);
+        myAnimate.run(oDiv8, {'height': 200}, 500);
+        myAnimate.run(oDiv8, {'opacity': 30}, 500, function () {
+            myAnimate.run(oDiv9, {'width': 200}, 500);
+            myAnimate.run(oDiv9, {'height': 200}, 500);
+            myAnimate.run(oDiv9, {'opacity': 30}, 500);
+        });
+
+    };
+    oBtn15.onclick = function () {
+        myAnimate.run(oDiv8, {'width': 100}, 500);
+        myAnimate.run(oDiv8, {'height': 100}, 500);
+        myAnimate.run(oDiv8, {'opacity': 100}, 500, function () {
+            myAnimate.run(oDiv9, {'width': 100}, 500);
+            myAnimate.run(oDiv9, {'height': 100}, 500);
+            myAnimate.run(oDiv9, {'opacity': 100}, 500);
+        });
+
+    };
+    oBtn16.onclick=function(){
+        var select=document.getElementsByTagName('select')[0];
+        var index=select.selectedIndex;
+        var arr=select.options[index].text.split('.');
+        var selectVal=arr.length>1?myAnimate.Tween[arr[0]][arr[1]]:myAnimate.Tween[arr[0]];
+       myAnimate.run(oDiv10, {'left': oDemo7.clientWidth-oDiv10.offsetWidth}, 2000,selectVal,function(){
+           myAnimate.run(oDiv10, {'left': 0}, 2000,selectVal);
+       });
+    };
+    oBtnBottom.onclick = function () {
+        myAnimate.run(document.body, {'scrollTop': document.documentElement.offsetHeight}, 500);
+    };
+    oBtnTop.onclick = function () {
+        myAnimate.run(document.body, {'scrollTop': 0}, 500);
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .div1{
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            top:0;
+            left:0;
+            background: red;
+        }
+        input{
+            float: right;
+        }
+    </style>
+</head>
+<body>
+<div class="div1">
+
+</div>
+<input type="button" value="move" id="start"/>
+<script src="js/animate.js" type="application/javascript"></script>
+<script>
+    var div1=document.querySelector('.div1');
+    var btnMove=document.querySelector('#start');
+
+    btnMove.onclick=function(){
+        myAnimate.run(div1,{'left':300,'top':300},1000,myAnimate.Tween.Bounce.easeOut,function(){
+            myAnimate.run(div1,{'left':0,'top':0},1000,myAnimate.Tween.Bounce.easeOut,function(){
+                console.log('movement completed');
+            })
+        })
+    }
+
+</script>
+</body>
+</html>
